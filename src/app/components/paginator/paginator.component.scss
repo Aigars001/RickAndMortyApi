@@ -1,0 +1,80 @@
+@import "variables";
+@import "media-queries";
+
+.paginator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paginator-step-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+  transition: all 0.3s ease-in-out;
+
+  @include extrasmall {
+    gap: 1rem;
+  }
+}
+
+.paginator-step {
+  display: flex;
+  align-items: center;
+  color: $color-malachite;
+}
+
+.paginator-link {
+  cursor: pointer;
+  //padding: 0.4rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  color: $color-malachite;
+  text-decoration: none;
+  
+  
+
+  @include extrasmall {
+    font-size: 1.6rem;
+  }
+
+  &:hover {
+    background-color: $color-malachite;
+    color: white;
+    font-weight: 700;
+  }
+
+  &.active {
+    background-color: $color-malachite;
+    color: white;
+    font-weight: 700;
+  }
+}
+
+.arrow-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  filter: $filter-malachite;
+
+  &.arrow-btn-right {
+    img {
+      transform: rotate(180deg);
+    }
+  }
+
+  img {
+    width: 1.2rem;
+  }
+
+  &.disabled {
+    filter: none;
+  }
+}

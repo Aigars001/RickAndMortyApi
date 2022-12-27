@@ -1,0 +1,29 @@
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">
+      <div *ngIf="character$ | async as character">
+        {{ character.name }}
+      </div>
+    </h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.close('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <div *ngIf="character$ | async as character">
+      Gender: {{ character.gender }}
+      <br />
+      Status: {{ character.status }}
+      <br />
+      From: {{ character.origin.name }}
+      <br />
+      Location: {{ character.location.name }}
+      <br />
+      Created: {{ character.created }}
+    </div>
+  </div>
+  <div class="modal-footer">
+  </div>
+</ng-template>

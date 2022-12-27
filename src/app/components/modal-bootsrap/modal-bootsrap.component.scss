@@ -1,0 +1,19 @@
+@import "variables";
+
+.modal-header{
+    background-color: $color-shandy;
+    border: none;
+}
+
+.modal-body{
+    background-color: $color-shandy;
+    font-size: medium;
+}
+
+.modal-footer{
+    background-color: $color-arylide-yellow;
+}
+
+.btn-close{
+    background-color: $color-blood-animal;
+}

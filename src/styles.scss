@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@import "fonts";
+@import "reset";
+@import "variables";
+@import 'theme';
+
+html{
+    font-size: 62.5%;
+    font-family: 'Montserrat', sans-serif;
+    color: $color-bluebonnet;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
